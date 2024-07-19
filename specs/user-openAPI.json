@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Simple User API",
+    "version": "1.0.0",
+    "description": "This is a simple API to fetch user details"
+  },
+  "servers": [
+    {
+      "url": "https://example.com/api",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/users/{userId}": {
+      "get": {
+        "summary": "Get user by ID",
+        "description": "Returns a single user by ID",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The ID of the user to retrieve"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A user object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The user ID"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the user"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "The email address of the user"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    }
+  }
+}
