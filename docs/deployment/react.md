@@ -58,6 +58,7 @@ For example:
     theme: { colors: { primary: { main: '#dd5522' } } },
   }}
 />
+
 ```
 
 For more information on configuration options, refer to the
