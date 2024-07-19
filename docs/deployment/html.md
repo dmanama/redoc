@@ -36,9 +36,11 @@ description.
 </html>
 ```
 
-{% admonition type="success" name="URL or local file" %}
-Set `spec-url` to a relative path if the file is local, e.g. `spec-url=my-api.yaml`. Use a full URL like the example above if it's hosted elsewhere.
-{% /admonition %}
+<div class="admonition success">
+  <p><strong>URL or local file</strong></p>
+  <p>Set <code>spec-url</code> to a relative path if the file is local, e.g. <code>spec-url=my-api.yaml</code>. Use a full URL like the example above if it's hosted elsewhere.</p>
+</div>
+
 
 Open the HTML file in your browser to see the HTML documentation rendering. You may want to read the next section and add some configuration to make your documentation your own.
 
